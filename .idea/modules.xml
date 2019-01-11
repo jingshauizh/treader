@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\gitcode\treader\treader\app\app.iml" filepath="E:\gitcode\treader\treader\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/treader.iml" filepath="$PROJECT_DIR$/treader.iml" />
+      <module fileurl="file://E:\gitcode\treader\treader\treader.iml" filepath="E:\gitcode\treader\treader\treader.iml" />
     </modules>
   </component>
 </project>
