@@ -21,6 +21,8 @@ import android.Manifest;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 
+import android.util.Log;
+import com.tinkerpatch.sdk.TinkerPatch;
 import com.wonium.example.R;
 import com.wonium.example.databinding.ActivityDeviceBinding;
 import com.wonium.extension.utils.DeviceUtil;
@@ -58,6 +60,7 @@ public class DeviceActivity extends BaseActivity {
         mBinding.includeLayoutDeviceToolbar.toolbar.setNavigationIcon(R.drawable.ic_arrow_back_24dp);
         mBinding.includeLayoutDeviceToolbar.toolbar.setNavigationOnClickListener(v -> finish());
         mBinding.btnDeviceInfo.setOnClickListener(v -> getDeviceInfo());
+        mBinding.btnDeviceInfo2.setOnClickListener(v -> getPatchInfo());
     }
 
     private void getDeviceInfo() {
@@ -65,6 +68,11 @@ public class DeviceActivity extends BaseActivity {
         mPermissionHelper.check(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.READ_PHONE_STATE,Manifest.permission.READ_SMS,Manifest.permission.READ_PHONE_NUMBERS)
                 .onSuccess(this::onSuccess).onDenied(this::onDenied).onNeverAskAgain(this::onNeverAskAgain).run();
 
+    }
+
+    private void getPatchInfo() {
+        Log.v("DeviceActivity","immediately 为 true, 每次强制访问服务器更新");
+        TinkerPatch.with().fetchPatchUpdate(true);
     }
     private void onSuccess(){
         StringBuilder builder =new StringBuilder();
@@ -90,7 +98,7 @@ public class DeviceActivity extends BaseActivity {
         ToastUtil.INSTANCE.show(this,"用户拒绝");
     }
     private void onNeverAskAgain(){
-        ToastUtil.INSTANCE.show(this,"onNeverAskAgain");
+        ToastUtil.INSTANCE.show(this,"onNeverAskAgain55555");
     }
 
 
