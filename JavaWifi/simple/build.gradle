@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.tencent.tinker.patch'
+apply from: 'tinkerpatch.gradle'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -9,13 +9,19 @@ android {
         versionCode 12
         versionName "0.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        multiDexEnabled true
 
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //proguardFiles getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -53,4 +59,8 @@ dependencies {
    // provided('com.tencent.tinker:tinker-android-anno:1.9.1')
     //tinker的核心库
     implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:${TINKERPATCH_VERSION}") { changing = true }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }
