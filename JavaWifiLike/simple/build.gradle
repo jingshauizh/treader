@@ -55,8 +55,8 @@ dependencies {
     implementation 'com.orhanobut:logger:2.2.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
 
-    //可选，用于生成application类
-   // provided('com.tencent.tinker:tinker-android-anno:1.9.1')
+    annotationProcessor("com.tinkerpatch.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
+    compileOnly("com.tinkerpatch.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
     //tinker的核心库
     implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:${TINKERPATCH_VERSION}") { changing = true }
 }

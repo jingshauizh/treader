@@ -20,7 +20,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.wonium.utils.App"
+        android:name="com.wonium.utils.Application"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"

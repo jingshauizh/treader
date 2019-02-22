@@ -23,7 +23,7 @@ import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
-import com.tencent.tinker.entry.ApplicationLike;
+import com.tencent.tinker.loader.app.ApplicationLike;
 import com.tinkerpatch.sdk.TinkerPatch;
 import com.tinkerpatch.sdk.loader.TinkerPatchApplicationLike;
 import com.wonium.example.BuildConfig;
@@ -43,7 +43,7 @@ import com.wonium.example.BuildConfig;
 public class App extends Application {
     private static App mInstance;
     private static final String TAG = "Tinker.App";
-    private ApplicationLike tinkerApplicationLike;
+    private com.tencent.tinker.loader.app.ApplicationLike tinkerApplicationLike;
 
     @Override
     public void onCreate() {

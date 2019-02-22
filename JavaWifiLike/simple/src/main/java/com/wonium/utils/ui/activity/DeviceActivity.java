@@ -98,7 +98,7 @@ public class DeviceActivity extends BaseActivity {
         ToastUtil.INSTANCE.show(this,"用户拒绝");
     }
     private void onNeverAskAgain(){
-        ToastUtil.INSTANCE.show(this,"onNeverAskAgain55555");
+        ToastUtil.INSTANCE.show(this,"onNeverAskAgain like change 555");
     }
 
 

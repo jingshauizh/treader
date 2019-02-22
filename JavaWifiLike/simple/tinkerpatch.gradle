@@ -5,7 +5,7 @@ apply plugin: 'tinkerpatch-support'
  * TODO: 请按自己的需求修改为适应自己工程的参数
  */
 def bakPath = file("${buildDir}/bakApk/")
-def baseInfo = "simple-1.0.1-0222-16-08-09"
+def baseInfo = "simple-3.0.1-0222-17-24-37"
 def variantName = "release"
 
 /**
@@ -20,7 +20,7 @@ tinkerpatchSupport {
         需要你手动修改'tinker.sample.android.app'本示例的包名为你自己的包名, com.xxx前缀的包名不用修改
      **/
     tinkerEnable = true
-    reflectApplication = true
+    reflectApplication = false
 
     /**
      * 是否开启加固模式，只能在APK将要进行加固时使用，否则会patch失败。
@@ -38,7 +38,7 @@ tinkerpatchSupport {
     appKey = "cdfdc85516c7776f"
 
     /** 注意: 若发布新的全量包, appVersion一定要更新 **/
-    appVersion = "1.0.1"
+    appVersion = "3.0.1"
 
     def pathPrefix = "${bakPath}/${baseInfo}/${variantName}/"
     def name = "${project.name}-${variantName}"
