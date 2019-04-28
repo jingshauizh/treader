@@ -142,6 +142,8 @@ public class BOSSThreeListAdapter extends BossBaseAdapter {
         this.notifyDataSetChanged();
     }
 
+
+    //todo  移动到 base
     private void cancelAllTimer() {
         if (null == countDownCounters || countDownCounters.size() <= 0) {
             return;

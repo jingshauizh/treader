@@ -139,8 +139,8 @@
       <file leaf-file-name="BOSSThreeListAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/testgridview/adapter/BOSSThreeListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="146" column="19" lean-forward="false" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+            <state relative-caret-position="431">
+              <caret line="145" column="20" lean-forward="true" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -2180,7 +2180,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1556445182693" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1556445347583" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2227,7 +2227,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1556445182693" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1556445347583" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2388,7 +2388,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1556445182693" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1556445347583" />
       </method>
     </configuration>
     <list size="1">
@@ -3043,8 +3043,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/testgridview/adapter/BOSSThreeListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="146" column="19" lean-forward="false" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+        <state relative-caret-position="431">
+          <caret line="145" column="20" lean-forward="true" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
           <folding />
         </state>
       </provider>
