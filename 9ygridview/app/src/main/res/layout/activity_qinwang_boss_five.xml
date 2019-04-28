@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000"
+    android:orientation="vertical"
+    >
+
+  <com.example.testgridview.JuheGridView
+      android:id="@+id/gview_boss5"
+      android:layout_width="match_parent"
+      android:layout_height="500dp"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginBottom="300dp"
+      android:columnWidth="80dp"
+      android:numColumns="4"
+      android:stretchMode="columnWidth"
+      ></com.example.testgridview.JuheGridView>
+
+
+
+  <RelativeLayout
+      android:background="@drawable/pic_bg"
+      android:layout_width="match_parent"
+      android:layout_alignParentBottom="true"
+      android:layout_height="230dp">
+
+    <com.example.testgridview.view.PercentCircle
+        android:id="@+id/boss_one_percentCircle"
+        android:layout_centerInParent="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:radius="250"
+        app:circleBackground="#00000000"
+        app:ringColor="#ffffff"
+        app:textColor="#ffffff"
+        />
+
+    <TextView
+        android:id="@+id/gview_count_down_text"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="60sp"
+        android:textColor="@color/item_selected_white"
+        />
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/ring"/>
+
+
+
+  </RelativeLayout>
+
+</RelativeLayout>

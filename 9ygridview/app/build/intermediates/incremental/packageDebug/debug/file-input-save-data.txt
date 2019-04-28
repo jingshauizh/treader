@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Apr 24 18:24:17 CST 2019
+0.baseType=DIRECTORY
+0.base=E\:\\gitcode\\treader\\9ygridview\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

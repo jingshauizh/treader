@@ -1,13 +1,17 @@
 package com.example.testgridview.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.example.testgridview.MainActivity;
 import com.example.testgridview.adapter.BOSSOneListAdapter;
 import com.example.testgridview.business.BossOneBusiness;
 import com.example.testgridview.model.GridItem;
@@ -28,6 +32,8 @@ public class ActivityBossOne extends Activity implements AdapterView.OnItemClick
     private BOSSOneGridAdapter saImageItems;
     private ClickeItem cachedClickeItem;
 
+    private boolean is40after;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +42,48 @@ public class ActivityBossOne extends Activity implements AdapterView.OnItemClick
         gview = (GridView) findViewById(R.id.gview_boss1);
         tvNotice = (TextView) findViewById(R.id.gview_boss1_solution_1);
         lActionListview = (ListView) findViewById(R.id.gview_boss1_ordered_list);
+        Intent mintent = getIntent();
+        is40after = mintent.getBooleanExtra("type",false);
         initData();
         saImageItems = new BOSSOneGridAdapter(this, gview);
         saImageItems.setActionItems(actionItems);
         gview.setAdapter(saImageItems);
         gview.setOnItemClickListener(this);
-        actionListItems = BossConstraint.getBOSS_ONE_ActionItemListBegin();
+        if (!is40after) {
+            actionListItems = BossConstraint.getBOSS_ONE_ActionItemListBegin();
+        } else {
+            actionListItems = BossConstraint.getBOSS_ONE_ActionItemList40After();
+        }
         saListImageItems = new BOSSOneListAdapter(this, lActionListview);
         saListImageItems.setActionItems(actionListItems);
         lActionListview.setAdapter(saListImageItems);
         //lActionListview.setOnItemClickListener(this);
+
+
+        Button bognshu1 =  findViewById(R.id.linearLayout_button_begin);
+        Button qinwang11 =  findViewById(R.id.linearLayout_button_40after);
+        bognshu1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityBossOne.this.finish();
+                Intent mintent = new Intent(ActivityBossOne.this, ActivityBossOne.class);
+                mintent.putExtra("type",false);
+                startActivity(mintent);
+            }
+        });
+        qinwang11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityBossOne.this.finish();
+                Intent mintent = new Intent(ActivityBossOne.this, ActivityBossOne.class);
+                mintent.putExtra("type",true);
+                startActivity(mintent);
+
+            }
+        });
+
+        //设置手机屏幕常亮
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     @Override
@@ -55,16 +93,26 @@ public class ActivityBossOne extends Activity implements AdapterView.OnItemClick
         GridItem clickedItem = actionItems.get(positon);
         int clickType = clickedItem.getItemType();
         List<GridItem> newactionListItems = BossConstraint.getBOSS_ONE_ActionItemListBegin();
-        long timedistance = System.currentTimeMillis() - cachedClickeItem.getClickeTime();
+
         String checkStringResult ="";
-        if(null != cachedClickeItem && (timedistance <= 30000)){
-            //cachedClickeItem 有效
-            checkStringResult =
-                BossOneBusiness.updateCheckedItemList(clickType, newactionListItems,cachedClickeItem.itemType);
+        if(null != cachedClickeItem ){
+            long timedistance = System.currentTimeMillis() - cachedClickeItem.getClickeTime();
+            if (timedistance <= 30000){
+                //cachedClickeItem 有效
+                if(!is40after){
+                    checkStringResult =
+                        BossOneBusiness.updateCheckedItemList(clickType, newactionListItems,cachedClickeItem.itemType);
+                }
+
+            }
+
         }
         else{
-             checkStringResult =
-                BossOneBusiness.updateCheckedItemList(clickType, newactionListItems);
+            if(!is40after){
+                checkStringResult =
+                    BossOneBusiness.updateCheckedItemList(clickType, newactionListItems);
+            }
+
         }
         saListImageItems.setActionItems(newactionListItems);
         tvNotice.setText(checkStringResult);

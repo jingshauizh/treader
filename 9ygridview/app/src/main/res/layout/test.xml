@@ -3,15 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:background="#000"
-    >
 
-	<com.example.testgridview.JuheGridView
-			android:id="@+id/gview"
-			android:layout_width="match_parent"
+    >
+	<LinearLayout
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:columnWidth="80dp"
-			android:numColumns="auto_fit"
-			android:stretchMode="columnWidth"
-			></com.example.testgridview.JuheGridView>
+			android:orientation="vertical"
+			>
+		<Button
+				android:id="@+id/gongshu1"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_margin="10dp"
+				android:text="公输BOSS 1"
+				/>
+		<Button
+				android:id="@+id/gongshu3"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_margin="10dp"
+				android:text="公输BOSS 3"
+				/>
+		<Button
+				android:id="@+id/qinwang1"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_margin="10dp"
+				android:text="秦王BOSS 1"
+				/>
+		<Button
+				android:id="@+id/qinwang2"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_margin="10dp"
+				android:text="秦王BOSS 2"
+				/>
+		<Button
+				android:id="@+id/qinwang5"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_margin="10dp"
+				android:text="秦王BOSS 5"
+				/>
+		<Button
+				android:id="@+id/qinwang6"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_margin="10dp"
+				android:text="秦王BOSS 5"
+				/>
+	</LinearLayout>
 </LinearLayout>

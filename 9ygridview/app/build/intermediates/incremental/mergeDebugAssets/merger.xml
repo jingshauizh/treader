@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\Android\example_code\mvp\testgridview\app\src\main\assets"/><source path="F:\Android\example_code\mvp\testgridview\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\Android\example_code\mvp\testgridview\app\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\gitcode\treader\9ygridview\app\src\main\assets"/><source path="E:\gitcode\treader\9ygridview\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\gitcode\treader\9ygridview\app\src\debug\assets"/></dataSet></merger>

@@ -24,7 +24,7 @@ public class BOSSOneGridAdapter extends BaseAdapter {
     private Context context;
     private GridView mGv;
     private List<GridItem> actionItems;
-    private static int ROW_NUMBER = 2;
+    private static int ROW_NUMBER = 3;
 
     public BOSSOneGridAdapter(Context context, GridView gv) {
         this.context = context;

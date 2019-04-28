@@ -9,6 +9,7 @@ public class GridItem {
     private String itemName;
     private int imageId;
     private boolean isSelected;
+    private long expirationTime = 0;
 
     public GridItem(String itemName, int imageId) {
         this.itemName = itemName;
@@ -53,5 +54,13 @@ public class GridItem {
 
     public void setSelected(boolean selected) {
         isSelected = selected;
+    }
+
+    public long getExpirationTime() {
+        return expirationTime;
+    }
+
+    public void setExpirationTime(long expirationTime) {
+        this.expirationTime = expirationTime;
     }
 }

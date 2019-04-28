@@ -20,14 +20,31 @@
     <activity
         android:name=".MainActivity"
         android:label="@string/app_name">
-
-    </activity>
-    <activity android:name=".activity.ActivityBossOne">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
+    </activity>
+    <activity android:name=".activity.ActivityBossOne"
+        android:launchMode="singleInstance">
+
+    </activity>
+    <activity android:name=".activity.ActivityBossThree"
+        android:launchMode="singleInstance">
+
+    </activity>
+
+
+    <activity android:name=".activity.ActivityQinwangBossOne"
+        android:launchMode="singleInstance"></activity>
+    <activity android:name=".activity.ActivityQinwangBossTwo"
+      android:launchMode="singleInstance">
+  </activity>
+    <activity android:name=".activity.ActivityQinwangBossFive"
+        android:launchMode="singleInstance">
+    </activity>
+    <activity android:name=".activity.ActivityQinwangBossOneTest"
+        android:launchMode="singleInstance">
     </activity>
   </application>
 
