@@ -1,8 +1,11 @@
 package com.example.testgridview.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,6 +26,7 @@ import java.util.List;
 
 public class ActivityBossOne extends Activity implements AdapterView.OnItemClickListener {
 
+    private static String TAG_LOG = "ActivityBossOne";
     private GridView gview;
     private ListView lActionListview;
     private List<GridItem> actionItems;
@@ -44,7 +48,10 @@ public class ActivityBossOne extends Activity implements AdapterView.OnItemClick
         lActionListview = (ListView) findViewById(R.id.gview_boss1_ordered_list);
         Intent mintent = getIntent();
         is40after = mintent.getBooleanExtra("type",false);
+
         initData();
+        initTimeDistanceFromSP(ActivityBossOne.this);
+
         saImageItems = new BOSSOneGridAdapter(this, gview);
         saImageItems.setActionItems(actionItems);
         gview.setAdapter(saImageItems);
@@ -84,6 +91,12 @@ public class ActivityBossOne extends Activity implements AdapterView.OnItemClick
 
         //设置手机屏幕常亮
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
+
+    private void initTimeDistanceFromSP(Context pcontext){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        String listpref = sp.getString(ActivitySettings.BOSS_1_SP_TIME_DISTANCE, "10000");
+        Log.v(TAG_LOG,"BOSS_1_SP_TIME_DISTANCE ="+listpref);
     }
 
     @Override
@@ -151,6 +164,8 @@ public class ActivityBossOne extends Activity implements AdapterView.OnItemClick
         GridItem pt4 = new GridItem(arrText[4], arrImages[4]);
         pt4.setItemType(BossConstraint.ACTION_BOSS1_XINGMIE);
         actionItems.add(pt4);
+
+
     }
 
 

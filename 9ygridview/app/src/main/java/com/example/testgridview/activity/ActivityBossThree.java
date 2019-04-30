@@ -23,7 +23,7 @@ import com.example.testgridview.model.GridItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityBossThree extends Activity implements AdapterView.OnItemClickListener {
+public class ActivityBossThree extends ActivityBase implements AdapterView.OnItemClickListener {
 
     private GridView gview;
     private ListView lActionListview;
@@ -45,6 +45,7 @@ public class ActivityBossThree extends Activity implements AdapterView.OnItemCli
         tvNotice = (TextView) findViewById(R.id.gview_boss1_solution_3);
         lActionListview = (ListView) findViewById(R.id.gview_boss3_ordered_list);
         initData();
+        initTimeDistanceFromSP(this,ActivitySettings.BOSS_3_SP_TIME_DISTANCE);
         saImageItems = new BOSSOneGridAdapter(this, gview);
         saImageItems.setActionItems(actionItems);
         gview.setAdapter(saImageItems);
@@ -52,6 +53,7 @@ public class ActivityBossThree extends Activity implements AdapterView.OnItemCli
         actionListItems = BossConstraintThree.getBOSS_THREE_ActionItemListBegin();
         saListImageItems = new BOSSThreeListAdapter(this, lActionListview);
         saListImageItems.setActionItems(actionListItems);
+        saListImageItems.setActionDistance(this.spActionDistance);
         lActionListview.setAdapter(saListImageItems);
         //lActionListview.setOnItemClickListener(this);
         lActionListview.setOnItemClickListener(this);

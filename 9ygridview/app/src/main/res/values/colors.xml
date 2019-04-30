@@ -4,4 +4,6 @@
   <color name="item_selected_white">#FFFFFFFF</color>
   <color name="item_to_selected_blue">#000efe</color>
   <drawable name="transparent">#00000000</drawable>
+  <color name="bg_title_color">#ff00aeff</color>
+  <drawable name="white">#ffffff</drawable>
 </resources>

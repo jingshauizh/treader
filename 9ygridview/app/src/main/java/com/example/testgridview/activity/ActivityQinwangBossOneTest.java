@@ -40,7 +40,7 @@ public class ActivityQinwangBossOneTest extends Activity implements AdapterView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qinwang_boss_one);
+        setContentView(R.layout.activity_qinwang_boss_one_test);
         gview = (GridView) findViewById(R.id.gview_boss1);
         tvNotice = (TextView) findViewById(R.id.gview_boss1_solution_1);
         lActionListview = (ListView) findViewById(R.id.gview_boss1_ordered_list);

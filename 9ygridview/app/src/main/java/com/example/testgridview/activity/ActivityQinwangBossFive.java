@@ -22,7 +22,8 @@ import com.example.testgridview.view.PercentCircle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityQinwangBossFive extends Activity implements AdapterView.OnItemClickListener ,View.OnClickListener{
+public class ActivityQinwangBossFive extends ActivityBase
+    implements AdapterView.OnItemClickListener, View.OnClickListener {
 
     private GridView gview;
 
@@ -44,9 +45,11 @@ public class ActivityQinwangBossFive extends Activity implements AdapterView.OnI
         mTextcount = findViewById(R.id.gview_count_down_text);
         mPercentCircle.setOnClickListener(this);
         //initData();
+        initTimeDistanceFromSP(this, ActivitySettings.BOSS_5_SP_TIME_DISTANCE);
         actionItems = BossConstraintQinWang5.getBOSS_FIVE_ActionItemListBegin();
         saImageItems = new BOSSQingwangTwoGridAdapter(this, gview);
         saImageItems.setActionItems(actionItems);
+        saImageItems.setActionDistance(this.spActionDistance);
         gview.setAdapter(saImageItems);
         gview.setOnItemClickListener(this);
 
@@ -62,25 +65,25 @@ public class ActivityQinwangBossFive extends Activity implements AdapterView.OnI
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.boss_one_percentCircle:
                 startCountDownTimer();
                 break;
         }
     }
 
-    private void startCountDownTimer(){
-        if(mCountDownTimer == null){
+    private void startCountDownTimer() {
+        if (mCountDownTimer == null) {
             mCountDownTimer = new CountDownTimer((long) (60 * 1000), 1000) {
 
                 @Override
                 public void onTick(long millisUntilFinished) {
                     if (!ActivityQinwangBossFive.this.isFinishing()) {
                         int remainTime = (int) (millisUntilFinished / 1000L);
-                        Log.e("zpan","======remainTime=====" + remainTime);
+                        Log.e("zpan", "======remainTime=====" + remainTime);
                         mTextcount.setText(String.valueOf(remainTime));
-                        if(null != mPercentCircle){
-                            int target = 100*(60-remainTime)/60;
+                        if (null != mPercentCircle) {
+                            int target = 100 * (60 - remainTime) / 60;
                             mPercentCircle.setTargetPercent(target);
                         }
                     }
@@ -88,13 +91,11 @@ public class ActivityQinwangBossFive extends Activity implements AdapterView.OnI
 
                 @Override
                 public void onFinish() {
-                    Log.e("zpan","======onFinish=====");
+                    Log.e("zpan", "======onFinish=====");
                 }
             };
             mCountDownTimer.start();
-
-        }
-        else{
+        } else {
             mCountDownTimer.cancel();
             mCountDownTimer.start();
         }
@@ -104,47 +105,14 @@ public class ActivityQinwangBossFive extends Activity implements AdapterView.OnI
      * 数据资源：标题 ＋ 图片
      */
     private String[] arrText = new String[] {
-        "须禁", "迷茫", "狂怒", "欢喜", "冥思","忧郁","极寒","恐吓"
+        "须禁", "迷茫", "狂怒", "欢喜", "冥思", "忧郁", "极寒", "恐吓"
     };
     private int[] arrImages = new int[] {
         R.drawable.address_book, R.drawable.calendar, R.drawable.camera, R.drawable.clock,
-        R.drawable.games_control,R.drawable.games_control,R.drawable.games_control
+        R.drawable.games_control, R.drawable.games_control, R.drawable.games_control
     };
 
-    //private void initData() {
-    //    actionItems = new ArrayList<GridItem>();
-    //    GridItem pt = new GridItem(arrText[0], arrImages[0]);
-    //    pt.setItemType(BossConstraint.ACTION_BOSS1_XINHENIZHUAN);
-    //    actionItems.add(pt);
-    //
-    //    GridItem pt1 = new GridItem(arrText[1], arrImages[1]);
-    //    pt1.setItemType(BossConstraint.ACTION_BOSS1_ZHURI);
-    //    actionItems.add(pt1);
-    //
-    //    GridItem pt2 = new GridItem(arrText[2], arrImages[2]);
-    //    pt2.setItemType(BossConstraint.ACTION_BOSS1_ZHUIXING);
-    //    actionItems.add(pt2);
-    //
-    //    GridItem pt3 = new GridItem(arrText[3], arrImages[3]);
-    //    pt3.setItemType(BossConstraint.ACTION_BOSS1_XINGLUOMIBU);
-    //    actionItems.add(pt3);
-    //
-    //    GridItem pt4 = new GridItem(arrText[4], arrImages[4]);
-    //    pt4.setItemType(BossConstraint.ACTION_BOSS1_XINGMIE);
-    //    actionItems.add(pt4);
-    //
-    //    GridItem pt5 = new GridItem(arrText[5], arrImages[5]);
-    //    pt4.setItemType(BossConstraint.ACTION_BOSS1_XINGMIE);
-    //    actionItems.add(pt5);
-    //
-    //    GridItem pt6 = new GridItem(arrText[6], arrImages[6]);
-    //    pt4.setItemType(BossConstraint.ACTION_BOSS1_XINGMIE);
-    //    actionItems.add(pt6);
-    //}
-
-
-
-    public class ClickeItem{
+    public class ClickeItem {
         private long clickeTime;
         private int itemType;
 
@@ -169,10 +137,6 @@ public class ActivityQinwangBossFive extends Activity implements AdapterView.OnI
             this.itemType = itemType;
         }
     }
-
-
-
-
 }
 
 

@@ -40,19 +40,22 @@
       />
 
   <RelativeLayout
-      android:layout_below="@+id/gview_boss1_solution_1"
-      android:background="@drawable/pic_bg"
       android:layout_width="wrap_content"
+      android:layout_height="200dp"
+      android:layout_alignParentLeft="true"
       android:layout_alignParentBottom="true"
-      android:layout_height="230dp">
+      android:layout_toLeftOf="@+id/gview_boss1_ordered_list"
+      android:layout_marginTop="75dp"
+      android:background="@drawable/pic_bg"
+      >
 
     <com.example.testgridview.view.PercentCircle
         android:id="@+id/boss_one_percentCircle"
-        android:layout_centerInParent="true"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        app:radius="250"
+        android:layout_centerInParent="true"
         app:circleBackground="#00000000"
+        app:radius="250"
         app:ringColor="#ffffff"
         app:textColor="#ffffff"
         />
@@ -61,16 +64,16 @@
         android:id="@+id/gview_count_down_text"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:textSize="60sp"
         android:textColor="@color/item_selected_white"
+        android:textSize="60sp"
         />
 
     <ImageView
-        android:layout_centerInParent="true"
         android:layout_width="220dp"
         android:layout_height="220dp"
-        android:src="@drawable/ring"/>
-
+        android:layout_centerInParent="true"
+        android:src="@drawable/ring"
+        />
 
 
   </RelativeLayout>

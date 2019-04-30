@@ -1791,15 +1791,37 @@
         <attr format="boolean" name="matProg_fillRadius"/>
         <attr format="dimension" name="matProg_barWidth"/>
         <attr format="boolean" name="matProg_linearProgress"/>
-    </declare-styleable></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\colors.xml" qualifiers=""><color name="item_selected">#ffDB4C4C</color><color name="item_selected_white">#FFFFFFFF</color><color name="item_to_selected_blue">#000efe</color><drawable name="transparent">#00000000</drawable></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\strings.xml" qualifiers=""><string name="hello_world">Hello world!</string><string name="action_settings">Settings</string><string name="app_name">BOSS助手</string></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
+    </declare-styleable></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\colors.xml" qualifiers=""><color name="item_selected">#ffDB4C4C</color><color name="item_selected_white">#FFFFFFFF</color><color name="item_to_selected_blue">#000efe</color><drawable name="transparent">#00000000</drawable><color name="bg_title_color">#ff00aeff</color><drawable name="white">#ffffff</drawable></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\strings.xml" qualifiers=""><string name="hello_world">Hello world!</string><string name="action_settings">Settings</string><string name="app_name">BOSS助手</string><string-array name="entries_list_preference">
+    <item>11000</item>
+    <item>11500</item>
+    <item>12000</item>
+    <item>12500</item>
+    <item>13000</item>
+    <item>13500</item>
+    <item>14000</item>
+    <item>14500</item>
+    <item>15000</item>
+  </string-array><string-array name="entryvalues_list_preference">
+    <item>11000</item>
+    <item>11500</item>
+    <item>12000</item>
+    <item>12500</item>
+    <item>13000</item>
+    <item>13500</item>
+    <item>14000</item>
+    <item>14500</item>
+    <item>15000</item>
+  </string-array></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
         
     </style><style name="AppTheme" parent="AppBaseTheme">
         
+    </style><style name="mystyle" parent="android:Theme">
+        <item name="android:windowTitleSize">50dp</item>
     </style></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         
     </style></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         
-    </style></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file></source><source path="E:\gitcode\treader\9ygridview\app\build\generated\res\rs\debug"/><source path="E:\gitcode\treader\9ygridview\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="E:\gitcode\treader\9ygridview\app\src\debug\res"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="E:\gitcode\treader\9ygridview\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/><attr format="boolean" name="showTitle"/></declare-styleable><declare-styleable name="AppCompatSeekBar"><attr name="android:thumb"/><attr format="reference" name="tickMark"/><attr format="color" name="tickMarkTint"/><attr name="tickMarkTintMode">
+    </style></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file><file name="preferences" path="E:\gitcode\treader\9ygridview\app\src\main\res\xml\preferences.xml" qualifiers="" type="xml"/><file name="activity_qinwang_boss_one_test" path="E:\gitcode\treader\9ygridview\app\src\main\res\layout\activity_qinwang_boss_one_test.xml" qualifiers="" type="layout"/><file name="btn_add" path="E:\gitcode\treader\9ygridview\app\src\main\res\drawable-hdpi\btn_add.png" qualifiers="hdpi-v4" type="drawable"/><file name="boss_title_layout" path="E:\gitcode\treader\9ygridview\app\src\main\res\layout\boss_title_layout.xml" qualifiers="" type="layout"/></source><source path="E:\gitcode\treader\9ygridview\app\build\generated\res\rs\debug"/><source path="E:\gitcode\treader\9ygridview\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="E:\gitcode\treader\9ygridview\app\src\debug\res"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="E:\gitcode\treader\9ygridview\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/><attr format="boolean" name="showTitle"/></declare-styleable><declare-styleable name="AppCompatSeekBar"><attr name="android:thumb"/><attr format="reference" name="tickMark"/><attr format="color" name="tickMarkTint"/><attr name="tickMarkTintMode">
             
             <enum name="src_over" value="3"/>
             

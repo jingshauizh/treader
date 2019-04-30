@@ -46,11 +46,18 @@
 				android:text="秦王BOSS 5"
 				/>
 		<Button
-				android:id="@+id/qinwang6"
+			android:id="@+id/qinwang6"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_margin="10dp"
+			android:text="秦王BOSS 1 test log"
+			/>
+		<Button
+				android:id="@+id/qinwang7"
 				android:layout_width="wrap_content"
 				android:layout_height="50dp"
 				android:layout_margin="10dp"
-				android:text="秦王BOSS 5"
+				android:text="Settings"
 				/>
 	</LinearLayout>
 </LinearLayout>

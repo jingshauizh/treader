@@ -25,7 +25,7 @@ import java.util.List;
  *  1 放大优化listview UI
  *  2 listview 可点击 干变背景色，提示 下两个 item
  */
-public class ActivityQinwangBossTwo extends Activity implements AdapterView.OnItemClickListener ,View.OnClickListener{
+public class ActivityQinwangBossTwo extends ActivityBase implements AdapterView.OnItemClickListener ,View.OnClickListener{
 
     private GridView gview;
     private GridView lActionListview;
@@ -50,6 +50,8 @@ public class ActivityQinwangBossTwo extends Activity implements AdapterView.OnIt
         mTextcount = findViewById(R.id.gview_count_down_text);
         //mPercentCircle.setOnClickListener(this);
         initData();
+        initTimeDistanceFromSP(this,ActivitySettings.BOSS_2_SP_TIME_DISTANCE);
+
         saImageItems = new BOSSOneGridAdapter(this, gview);
         saImageItems.setActionItems(actionItems);
         gview.setAdapter(saImageItems);
@@ -57,6 +59,7 @@ public class ActivityQinwangBossTwo extends Activity implements AdapterView.OnIt
         actionListItems = BossConstraintQinWang2.getBOSS_TWO_ActionItemListBegin();
         saListImageItems = new BOSSQingwangTwoGridAdapter(this, lActionListview);
         saListImageItems.setActionItems(actionListItems);
+        saListImageItems.setActionDistance(this.spActionDistance);
         lActionListview.setAdapter(saListImageItems);
         lActionListview.setOnItemClickListener(this);
         //lActionListview.setOnItemClickListener(this);

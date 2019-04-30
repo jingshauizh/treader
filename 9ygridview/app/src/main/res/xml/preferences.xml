@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="BOSS 1 间隔时间(毫秒)">
+    <ListPreference
+        android:dialogTitle="选择一个"
+        android:entries="@array/entries_list_preference"
+        android:entryValues="@array/entryvalues_list_preference"
+        android:key="list_preference_boss1"
+        android:defaultValue="12000"
+        android:summary="选择一个间隔时间"
+        android:title="间隔时间"/>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="BOSS 2 间隔时间(毫秒)">
+    <ListPreference
+        android:dialogTitle="选择一个"
+        android:entries="@array/entries_list_preference"
+        android:entryValues="@array/entryvalues_list_preference"
+        android:key="list_preference_boss2"
+        android:defaultValue="12000"
+        android:summary="选择一个间隔时间"
+        android:title="间隔时间"/>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="BOSS 3 间隔时间(毫秒)">
+    <ListPreference
+        android:dialogTitle="选择一个"
+        android:entries="@array/entries_list_preference"
+        android:entryValues="@array/entryvalues_list_preference"
+        android:key="list_preference_boss3"
+        android:defaultValue="12000"
+        android:summary="选择一个间隔时间"
+        android:title="间隔时间"/>
+  </PreferenceCategory>
+  <PreferenceCategory android:title="BOSS 4 间隔时间(毫秒)">
+    <ListPreference
+        android:dialogTitle="选择一个"
+        android:entries="@array/entries_list_preference"
+        android:entryValues="@array/entryvalues_list_preference"
+        android:key="list_preference_boss4"
+        android:defaultValue="12000"
+        android:summary="选择一个间隔时间"
+        android:title="间隔时间"/>
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="BOSS 5 间隔时间(毫秒)">
+    <ListPreference
+        android:dialogTitle="选择一个"
+        android:entries="@array/entries_list_preference"
+        android:entryValues="@array/entryvalues_list_preference"
+        android:key="list_preference_boss5"
+        android:defaultValue="12000"
+        android:summary="选择一个间隔时间"
+        android:title="间隔时间"/>
+  </PreferenceCategory>
+</PreferenceScreen>
