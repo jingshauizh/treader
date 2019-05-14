@@ -1792,25 +1792,45 @@
         <attr format="dimension" name="matProg_barWidth"/>
         <attr format="boolean" name="matProg_linearProgress"/>
     </declare-styleable></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\colors.xml" qualifiers=""><color name="item_selected">#ffDB4C4C</color><color name="item_selected_white">#FFFFFFFF</color><color name="item_to_selected_blue">#000efe</color><drawable name="transparent">#00000000</drawable><color name="bg_title_color">#ff00aeff</color><drawable name="white">#ffffff</drawable></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\strings.xml" qualifiers=""><string name="hello_world">Hello world!</string><string name="action_settings">Settings</string><string name="app_name">BOSS助手</string><string-array name="entries_list_preference">
+    <item>9000</item>
+    <item>9500</item>
+    <item>10000</item>
+    <item>10500</item>
     <item>11000</item>
     <item>11500</item>
     <item>12000</item>
-    <item>12500</item>
     <item>13000</item>
     <item>13500</item>
     <item>14000</item>
     <item>14500</item>
     <item>15000</item>
+    <item>15500</item>
+    <item>16000</item>
+    <item>16500</item>
+    <item>17000</item>
+    <item>17500</item>
+    <item>18000</item>
+    <item>18500</item>
   </string-array><string-array name="entryvalues_list_preference">
+    <item>9000</item>
+    <item>9500</item>
+    <item>10000</item>
+    <item>10500</item>
     <item>11000</item>
     <item>11500</item>
     <item>12000</item>
-    <item>12500</item>
     <item>13000</item>
     <item>13500</item>
     <item>14000</item>
     <item>14500</item>
     <item>15000</item>
+    <item>15500</item>
+    <item>16000</item>
+    <item>16500</item>
+    <item>17000</item>
+    <item>17500</item>
+    <item>18000</item>
+    <item>18500</item>
   </string-array></file><file path="E:\gitcode\treader\9ygridview\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
         
     </style><style name="AppTheme" parent="AppBaseTheme">
