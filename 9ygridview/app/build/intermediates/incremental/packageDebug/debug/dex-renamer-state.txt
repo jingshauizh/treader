@@ -1,4 +1,0 @@
-#Thu May 09 17:11:25 CST 2019
-base.0=E\:\\gitcode\\treader\\9ygridview\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
-renamed.0=classes.dex

@@ -4,7 +4,7 @@
             "outputFile": "E:\\gitcode\\treader\\9ygridview\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jings\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\18952ac34873b2152180b43c24b4524f\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\jings\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.2.aar\\b3f40806623e8a7c26f0c9a7d90ea4bc\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jings\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.0.2.aar\\aeef75abd3c29468b1ebd695abcf775a\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\jings\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.0.2.aar\\fa62be7a48c37d7fa17813daa5a28c44\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
