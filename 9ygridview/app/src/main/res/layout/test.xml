@@ -50,7 +50,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="50dp"
 			android:layout_margin="10dp"
-			android:text="秦王BOSS 1 test log 338899"
+			android:text="秦王BOSS 1 test log 333333"
 			/>
 		<Button
 				android:id="@+id/qinwang7"
