@@ -17,24 +17,24 @@ public abstract class BossBaseAdapter extends BaseAdapter {
     public void setSelectedItem(int position){
         int selectedPos = position;
         if(null != actionItems){
+            unSelectAll();
             if ((selectedPos < 0) || (selectedPos >= actionItems.size())) {
                 actionItems.get(0).setSelected(true);
                 actionItems.get(0).setExpirationTime(System.currentTimeMillis()+actionDistance);
             }
             else{
-                for(int i=0;i<actionItems.size();i++){
-                    if(i == selectedPos){
-                        actionItems.get(i).setSelected(true);
-                        actionItems.get(i).setExpirationTime(System.currentTimeMillis()+actionDistance);
-                    }
-                    else{
-                        actionItems.get(i).setSelected(false);
-                        actionItems.get(i).setExpirationTime(0);
-                    }
-                }
+                actionItems.get(selectedPos).setSelected(true);
+                actionItems.get(selectedPos).setExpirationTime(System.currentTimeMillis()+actionDistance);
             }
         }
         this.notifyDataSetChanged();
+    }
+
+    private void unSelectAll(){
+        for(int i=0;i<actionItems.size();i++){
+            actionItems.get(i).setSelected(false);
+            actionItems.get(i).setExpirationTime(0);
+        }
     }
 
     public int getActionDistance() {
