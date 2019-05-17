@@ -32,7 +32,7 @@ import com.tencent.tinker.loader.shareutil.ShareConstants;
 import com.example.testgridview.log.MyLogImp;
 import com.example.testgridview.utils.SampleApplicationContext;
 import com.example.testgridview.utils.TinkerManager;
-import com.tinkerpatch.sdk.TinkerPatch;
+//import com.tinkerpatch.sdk.TinkerPatch;
 
 /**
  * because you can not use any other class in your application, we need to
@@ -97,17 +97,17 @@ public class SampleApplicationLike extends DefaultApplicationLike {
         Tinker tinker = Tinker.with(getApplication());
 
 
-        TinkerPatch.init(this)
-            .reflectPatchLibrary()
-            .setPatchRollbackOnScreenOff(true)
-            .setPatchRestartOnSrceenOff(true)
-            .setFetchPatchIntervalByHours(1);
-
-        // 获取当前的补丁版本
-        Log.d("9yboss", "current patch version is " + TinkerPatch.with().getPatchVersion());
-
-        //每隔3个小时去访问后台时候有更新,通过handler实现轮训的效果
-        TinkerPatch.with().fetchPatchUpdateAndPollWithInterval();
+        //TinkerPatch.init(this)
+        //    .reflectPatchLibrary()
+        //    .setPatchRollbackOnScreenOff(true)
+        //    .setPatchRestartOnSrceenOff(true)
+        //    .setFetchPatchIntervalByHours(1);
+        //
+        //// 获取当前的补丁版本
+        //Log.d("9yboss", "current patch version is " + TinkerPatch.with().getPatchVersion());
+        //
+        ////每隔3个小时去访问后台时候有更新,通过handler实现轮训的效果
+        //TinkerPatch.with().fetchPatchUpdateAndPollWithInterval();
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)

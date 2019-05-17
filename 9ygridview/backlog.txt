@@ -1,0 +1,1 @@
+1 tinker sdk 集成不成功 ，再是不能自动接入 tinker 管理平台
